@@ -9,21 +9,14 @@ const { Client, GatewayIntentBits, AttachmentBuilder } = require('discord.js');
 // Khởi tạo bot
 const client = new Client({ 
     intents: [
-
-// ... (Phần code cũ của bạn nằm ở dưới này) ...
-const { Client, GatewayIntentBits, AttachmentBuilder } = require('discord.js');
-
-// Khởi tạo bot
-const client = new Client({ 
-    intents: [
-        GatewayIntentBits.Guilds, 
+        GatewayIntentBits.Guilds,
         GatewayIntentBits.GuildMembers
-    ] 
+    ]
 });
 
 // THAY TOKEN CỦA BẠN VÀO ĐÂY (Nhớ giữ lại 2 dấu nháy đơn)
 const TOKEN = process.env.TOKEN;
-const GUILD_ID = '1382186991780626552'; 
+const GUILD_ID = '1382186991780626552';
 
 client.on('ready', async () => {
     console.log(`\n🤖 Bot ${client.user.tag} đã online và đang nghe lệnh!`);
