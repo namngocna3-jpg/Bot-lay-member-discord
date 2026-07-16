@@ -1,3 +1,16 @@
+const http = require('http');
+http.createServer((req, res) => {
+   res.write("Bot is running!");
+   res.end();
+}).listen(process.env.PORT || 3000);
+
+const { Client, GatewayIntentBits, AttachmentBuilder } = require('discord.js');
+
+// Khởi tạo bot
+const client = new Client({ 
+    intents: [
+
+// ... (Phần code cũ của bạn nằm ở dưới này) ...
 const { Client, GatewayIntentBits, AttachmentBuilder } = require('discord.js');
 
 // Khởi tạo bot
