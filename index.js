@@ -1,8 +1,13 @@
 const http = require('http');
+const port = process.env.PORT || 10000;
+
 http.createServer((req, res) => {
-   res.write("Bot is running!");
-   res.end();
-}).listen(process.env.PORT || 3000);
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.write("Bot is running perfectly!");
+    res.end();
+}).listen(port, '0.0.0.0', () => {
+    console.log(`🌐 Đã mở cổng Web thành công tại Port ${port} để vượt ải Render!`);
+});
 
 const { Client, GatewayIntentBits, AttachmentBuilder } = require('discord.js');
 
