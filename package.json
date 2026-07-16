@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-render",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "render": "node render.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0"
+  }
+}
